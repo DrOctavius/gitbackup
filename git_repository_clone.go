@@ -47,6 +47,7 @@ func handleGitRepositoryClone(client interface{}, c *appConfig) error {
 					return timeErr
 				}
 				c.githubStartFromLastPushAt = tmpTime.Format(cacheSaveLastBackupDateAndContinueFromCache)
+				log.Println("filtering by last push at date -> ", c.githubStartFromLastPushAt)
 			}
 		}
 	}
